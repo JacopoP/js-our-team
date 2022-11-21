@@ -1,3 +1,4 @@
+const container = document.getElementById("container");
 const ourTeam = [];
 
 const wayne = {
@@ -56,7 +57,10 @@ ourTeam.push(barbara);
 
 for(let i=0; i<ourTeam.length; i++){
     console.log(ourTeam[i]);
+    const newElement = document.createElement("div");
     for(let key in ourTeam[i]){
         console.log(key, ":", ourTeam[i][key]);
+        newElement.innerHTML += `<div>${key}: ${ourTeam[i][key]}</div>`
     }
+    container.appendChild(newElement);
 }
