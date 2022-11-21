@@ -1,74 +1,72 @@
 const container = document.getElementById("container");
 const ourTeam = [];
 
+// creazione objects
 const wayne = {
+    "image" : "wayne-barnett-founder-ceo.jpg",
     "name" : "Wayne",
     "surname" : "Barnett",
-    "role" : "Founder and CEO",
-    "image" : "wayne-barnett-founder-ceo.jpg"
+    "role" : "Founder and CEO"
 }
 
 ourTeam.push(wayne);
 
 const angelaC = {
+    "image" : "angela-caroll-chief-editor.jpg",
     "name" : "Angela",
     "surname" : "Caroll",
-    "role" : "Chief Editor",
-    "image" : "angela-caroll-chief-editor.jpg"
+    "role" : "Chief Editor"
 }
 
 ourTeam.push(angelaC);
 
 const walter = {
+    "image" : "walter-gordon-office-manager.jpg",
     "name" : "Walter",
     "surname" : "Gordon",
-    "role" : "Office Manager",
-    "image" : "walter-gordon-office-manager.jpg"
+    "role" : "Office Manager"
 }
 
 ourTeam.push(walter);
 
 const angelaL = {
+    "image" : "angela-lopez-social-media-manager.jpg",
     "name" : "Angela",
     "surname" : "Lopez",
-    "role" : "Social Media Manager",
-    "image" : "angela-lopez-social-media-manager.jpg"
+    "role" : "Social Media Manager"
 }
 
 ourTeam.push(angelaL);
 
 const scott = {
+    "image" : "scott-estrada-developer.jpg",
     "name" : "Scott",
     "surname" : "Estrada",
-    "role" : "Developer",
-    "image" : "scott-estrada-developer.jpg"
+    "role" : "Developer"
 }
 
 ourTeam.push(scott);
 
 const barbara = {
+    "image" : "barbara-ramos-graphic-designer.jpg",
     "name" : "Barbara",
     "surname" : "Ramos",
-    "role" : "Graphic Designer",
-    "image" : "barbara-ramos-graphic-designer.jpg"
+    "role" : "Graphic Designer"
 }
 
 ourTeam.push(barbara);
 
+// creazione cards
 for(let i=0; i<ourTeam.length; i++){
-    console.log(ourTeam[i]);
     const newElement = document.createElement("div");
-    for(let key in ourTeam[i]){
-        console.log(key, ":", ourTeam[i][key]);
+    // inserimento immagine
+    newElement.innerHTML += `<img src="img/${ourTeam[i].image}">`
+    // inserimento nome e cognome
+    newElement.innerHTML += `<h3>${ourTeam[i]["name"]} ${ourTeam[i]["surname"]}</h3>`
+    // inserimento ruolo
+    newElement.innerHTML += `<h4>${ourTeam[i]["role"]}</h4>`
 
-        if(key=="image"){
-            console.log("pippo")
-            newElement.innerHTML += `<img src="img/${ourTeam[i][key]}">`
-        }
-        else{
-            newElement.innerHTML += `<div>${key}: ${ourTeam[i][key]}</div>`
-        }
-    }
-    newElement.style.width=100/ourTeam.length + "%";
+    newElement.classList += "card";
+
     container.appendChild(newElement);
 }
