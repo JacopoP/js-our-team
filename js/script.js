@@ -1,8 +1,8 @@
 const ourTeam = [];
 
 const wayne = {
-    "nome" : "Wayne",
-    "cognome" : "Barnett",
+    "name" : "Wayne",
+    "surname" : "Barnett",
     "role" : "Founder and CEO",
     "image" : "wayne-barnett-founder-ceo.jpg"
 }
@@ -10,8 +10,8 @@ const wayne = {
 ourTeam.push(wayne);
 
 const angelaC = {
-    "nome" : "Angela",
-    "cognome" : "Caroll",
+    "name" : "Angela",
+    "surname" : "Caroll",
     "role" : "Chief Editor",
     "image" : "angela-caroll-chief-editor.jpg"
 }
@@ -19,8 +19,8 @@ const angelaC = {
 ourTeam.push(angelaC);
 
 const walter = {
-    "nome" : "Walter",
-    "cognome" : "Gordon",
+    "name" : "Walter",
+    "surname" : "Gordon",
     "role" : "Office Manager",
     "image" : "walter-gordon-office-manager.jpg"
 }
@@ -28,8 +28,8 @@ const walter = {
 ourTeam.push(walter);
 
 const angelaL = {
-    "nome" : "Angela",
-    "cognome" : "Lopez",
+    "name" : "Angela",
+    "surname" : "Lopez",
     "role" : "Social Media Manager",
     "image" : "angela-lopez-social-media-manager.jpg"
 }
@@ -37,8 +37,8 @@ const angelaL = {
 ourTeam.push(angelaL);
 
 const scott = {
-    "nome" : "Scott",
-    "cognome" : "Estrada",
+    "name" : "Scott",
+    "surname" : "Estrada",
     "role" : "Developer",
     "image" : "scott-estrada-developer.jpg"
 }
@@ -46,12 +46,17 @@ const scott = {
 ourTeam.push(scott);
 
 const barbara = {
-    "nome" : "Barbara",
-    "cognome" : "Ramos",
+    "name" : "Barbara",
+    "surname" : "Ramos",
     "role" : "Graphic Designer",
     "image" : "barbara-ramos-graphic-designer.jpg"
 }
 
 ourTeam.push(barbara);
 
-console.log(ourTeam);
+for(let i=0; i<ourTeam.length; i++){
+    console.log(ourTeam[i]);
+    for(let key in ourTeam[i]){
+        console.log(key, ":", ourTeam[i][key]);
+    }
+}
